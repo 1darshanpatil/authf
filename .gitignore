@@ -1,0 +1,6 @@
+.venv/
+build/
+dist/
+authf.egg-info/
+authf/__pycache__/
+authf/__pycache__/*

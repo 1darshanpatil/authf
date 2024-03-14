@@ -1,0 +1,6 @@
+# Editable install with no version control (authf==0.0.2)
+cffi==1.16.0
+cryptography==42.0.5
+pycparser==2.21
+pyotp==2.9.0
+pyperclip==1.8.2
