@@ -54,6 +54,16 @@ Enter password to view TOTP:
 Your TOTP for authentication is 270142
 ```
 
+The primary use of this tool is to allow you to transfer your accounts from one machine to another. Additionally, it provides an opportunity to change the password for existing scripts.
+
+```python
+>>> from authf import add_offline; help(add_offline)
+```
+- Restore accounts Offline:
+```bash
+$ authf --addoffline
+```
+
 
 - Remove your all accounts
 

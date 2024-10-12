@@ -46,7 +46,7 @@ def re_encrypt_key(decrypted_key, password):
 
 def add_offline():
     """
-    Adds or updates an account's encrypted key in an offline database.
+    Adds or updates an account's encrypted key from one machine to another one.
     The user is prompted to input account details and encryption information.
     Re-encryption option is provided if needed.
     """

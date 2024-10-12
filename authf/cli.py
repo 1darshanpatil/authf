@@ -228,6 +228,7 @@ def main():
     --addaccount : Flag to add a new account.
     --totp       : Flag to display the TOTP for an account.
     --rm         : Flag to remove an existing account.
+    --addoffline : Flag to let you restore accounts from other devices.
     --version    : Flag to display the current version of the package.
     """
     parser = argparse.ArgumentParser(description="Authentication Tool", allow_abbrev=False)
@@ -251,7 +252,7 @@ def main():
     elif args.version:
         print(f"Authf: {__version__}")
     else:
-        print("Usage: authf [--addaccount | --totp | --rm | --version]")
+        print("Usage: authf [--addaccount | --totp | --rm | --addoffline | --version]")
 
 if __name__ == "__main__":
     main()
