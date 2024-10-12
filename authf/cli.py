@@ -3,6 +3,7 @@ import pyperclip
 from .engine import *
 from authf import __version__
 from .encryption import *
+from .add_offline import *
 import argparse
 import base64
 import os
@@ -235,6 +236,7 @@ def main():
     parser.add_argument("--addaccount", action="store_true", help="Add a new account")
     parser.add_argument("--totp", action="store_true", help="Shows TOTP")
     parser.add_argument("--rm", action="store_true", help="Removes your accounts")
+    parser.add_argument("--addoffline", action="store_true", help="Helps you store accounts from other devices")
     parser.add_argument("--version", action="store_true", help="Current Package version")
     args = parser.parse_args()
 
@@ -244,6 +246,8 @@ def main():
         viewing_totp()
     elif args.rm:
         hard_reset()
+    elif args.addoffline:
+        add_offline()
     elif args.version:
         print(f"Authf: {__version__}")
     else:
