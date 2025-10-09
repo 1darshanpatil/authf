@@ -1,6 +1,10 @@
 from setuptools import setup, find_packages
 from authf import __version__
 
+def read_requirements(filename='requirements.txt'):
+    with open(filename, 'r') as f:
+        return [line.strip() for line in f if line and not line.startswith('#')]
+
 with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
 
@@ -27,13 +31,7 @@ setup(
     ],
     python_requires=">=3.6",
     keywords="authenticator, authentication, Two Step Authentication",
-    install_requires=[
-        "cffi==1.16.0",
-        "cryptography==42.0.5",
-        "pycparser==2.21",
-        "pyotp==2.9.0",
-        "pyperclip==1.8.2"
-    ],
+    install_requires=read_requirements('requirements.txt'),
     project_urls={
         "Documentation": "https://github.com/1darshanpatil/authf#readme",
         "Source": "https://github.com/1darshanpatil/authf",
