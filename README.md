@@ -16,20 +16,19 @@ Authf is an authentication management package developed for Python. It offers a 
 
 
 
-
 ## Installation
 
+Recommended (installs authf in its own isolated environment):
 
+```
+pipx install authf
+```
 
-You can install `Authf` using pip:
-```bash
+Or with pip:
+
+```
 pip install authf
 ```
-## Version
-```bash
-authf --version
-```
-
 
 ## Usage
 
@@ -76,7 +75,7 @@ $ authf --rm
 
 ## Requirements
 
-AuthF requires Python 3.x. All dependencies are listed in the `requirements.txt` file.
+AuthF requires Python 3.9 or newer.
 
 ## Contributing
 

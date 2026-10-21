@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authf"
+dynamic = ["version"]
+description = "Authenticator Application"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Darshan P." }]
+requires-python = ">=3.9"
+keywords = ["authenticator", "authentication", "two-step authentication"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "cryptography>=45",
+    "pyotp>=2.9",
+    "pyperclip>=1.8",
+]
+
+[project.scripts]
+authf = "authf.cli:main"
+
+[project.urls]
+Documentation = "https://github.com/1darshanpatil/authf#readme"
+Source = "https://github.com/1darshanpatil/authf"
+Tracker = "https://github.com/1darshanpatil/authf/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "authf.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["authf*"]
